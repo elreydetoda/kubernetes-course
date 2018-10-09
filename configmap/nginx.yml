@@ -14,7 +14,7 @@ spec:
     - name: config-volume
       mountPath: /etc/nginx/conf.d
   - name: k8s-demo
-    image: wardviaene/k8s-demo
+    image: elrey741/docker-demo
     ports:
     - containerPort: 3000
   volumes:

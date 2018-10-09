@@ -24,7 +24,7 @@ spec:
               topologyKey: "kubernetes.io/hostname"
       containers:
       - name: k8s-demo
-        image: wardviaene/k8s-demo
+        image: elrey741/docker-demo
         ports:
         - name: nodejs-port
           containerPort: 3000
