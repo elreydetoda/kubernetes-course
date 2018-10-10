@@ -19,7 +19,7 @@ metadata:
   name: helloworld-auth
 spec:
   hosts:
-  - "auth.kubernetes.newtech.academy"
+  - "auth.kops.elreydetoda.ml"
   gateways:
   - helloworld-gateway
   http:
@@ -35,7 +35,7 @@ metadata:
   name: helloworld-hello
 spec:
   hosts:
-  - "hello.kubernetes.newtech.academy"
+  - "hello.kops.elreydetoda.ml"
   gateways:
   - helloworld-gateway
   http:

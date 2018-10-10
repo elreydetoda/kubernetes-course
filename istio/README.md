@@ -2,7 +2,7 @@
 
 ## Kops configuration
 ```
-kops edit cluster kubernetes.newtech.academy
+kops edit cluster kops.elreydetoda.ml
 ```
 Add:
 ```

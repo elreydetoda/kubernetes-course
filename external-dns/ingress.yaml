@@ -5,14 +5,14 @@ metadata:
   name: helloworld-rules
 spec:
   rules:
-  - host: helloworld-v1.kubernetes.newtech.academy
+  - host: helloworld-v1.kops.elreydetoda.ml
     http:
       paths:
       - path: /
         backend:
           serviceName: helloworld-v1
           servicePort: 80
-  - host: helloworld-v2.kubernetes.newtech.academy
+  - host: helloworld-v2.kops.elreydetoda.ml
     http:
       paths:
       - path: /

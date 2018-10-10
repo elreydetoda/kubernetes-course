@@ -40,7 +40,7 @@ kubeless function call myfunction --data 'This is some data'
 ## Expose function
 ```
 kubectl create -f nginx-ingress-controller-with-elb.yml
-kubeless trigger http create myfunction --function-name myfunction --hostname myfunction.kubernetes.newtech.academy
+kubeless trigger http create myfunction --function-name myfunction --hostname myfunction.kops.elreydetoda.ml
 ```
 
 
