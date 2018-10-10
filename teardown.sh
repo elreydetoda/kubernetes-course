@@ -6,7 +6,7 @@
 # po = pods
 # deploy = deployments
 # ds = daemonset
-teardown_array=( deploy ing ds rc svc po secrets)
+teardown_array=( deploy ing ds rc svc po secrets podpreset)
 
 for area in ${teardown_array[@]} ; do
 	specific_area=$(kubectl get $area -o name | grep -v 'service/kubernetes')
