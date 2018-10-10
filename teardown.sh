@@ -6,11 +6,13 @@
 # po = pods
 # deploy = deployments
 # ds = daemonset
-teardown_array=( deploy ing ds rc svc po )
+teardown_array=( deploy ing ds rc svc po secrets)
 
 for area in ${teardown_array[@]} ; do
 	specific_area=$(kubectl get $area -o name | grep -v 'service/kubernetes')
 	for item in $specific_area ; do
+		kubectl get $item | grep 'kubernetes.io/service-account-token' &> /dev/null
+		default_secret=$?
 		if [[ $area == 'po' ]] ; then
 			kubectl get $item | grep 'Running' &> /dev/null
 			item_status=$?
@@ -18,6 +20,8 @@ for area in ${teardown_array[@]} ; do
 				# echo "Deleteing pod: $item"
 				kubectl delete --wait=false $item
 			fi
+		elif [[ $default_secret == 0 ]] ; then
+			echo 'skipping deletion of default secret'
 		else
 			# echo "Deleteing: $item"
 			kubectl delete $item

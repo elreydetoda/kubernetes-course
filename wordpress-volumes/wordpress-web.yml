@@ -71,5 +71,5 @@ spec:
       volumes:
       - name: uploads
         nfs:
-          server: eu-west-1a.fs-5714e89e.efs.eu-west-1.amazonaws.com
+          server: us-east-1a.fs-dd50b597.efs.us-east-1.amazonaws.com
           path: /
